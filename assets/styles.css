@@ -568,7 +568,8 @@ section { padding: 72px 0; position: relative; }
 .resume-frame iframe {
   display: block;
   width: 100%;
-  min-height: 820px;
+  aspect-ratio: 8.5 / 11.6;
+  min-height: 1100px;
   border: 1px solid var(--paper-edge);
   background: #fff;
 }
@@ -718,5 +719,5 @@ section { padding: 72px 0; position: relative; }
 }
 
 @media (max-width: 900px) {
-  .resume-frame iframe { min-height: 68vh; }
+  .resume-frame iframe { min-height: 90vh; }
 }
