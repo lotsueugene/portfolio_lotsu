@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Eugene's Archive</title>
+  <meta name="description" content="A working archive of projects, experiences, and artefacts, pinned to the wall." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,0..100&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/styles.css" />
+</head>
+<body>
+  <main class="page">
+    <!-- Masthead -->
+    <header class="masthead reveal">
+      <div class="monogram" id="monogram" aria-hidden="true">EL</div>
+
+      <div class="masthead-title">
+        <h4 id="mastheadTitle">Eugene's Atelier & Archive</h4>
+        <div class="issue" id="issue"></div>
+      </div>
+
+      <div class="masthead-right">
+        <nav class="nav" aria-label="primary">
+          <a href="#work">Work</a>
+          <a href="#experience">Ledger</a>
+          <a href="#about">About</a>
+          <a href="#resume">Resume</a>
+          <a href="#contact">Write Me</a>
+        </nav>
+
+        <button class="lights" id="lights" type="button" aria-label="Toggle lights">
+          <span class="glyph" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+              <circle cx="12" cy="12" r="4.2" />
+              <path d="M12 2.6v2.4M12 19v2.4M2.6 12h2.4M19 12h2.4M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M4.9 19.1l1.7-1.7M17.4 6.6l1.7-1.7" />
+            </svg>
+          </span>
+          <span class="label-on">Lights · On</span>
+          <span class="label-off">Lights · Off</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero reveal" id="top">
+      <div class="portrait-frame" id="portraitFrame"></div>
+      <div>
+        <div class="lede" id="lede"></div>
+        <dl class="meta" id="heroMeta"></dl>
+      </div>
+    </section>
+
+    <!-- Work -->
+    <section id="work">
+      <header class="section-head reveal">
+        <h2>Selected Work</h2>
+        <span class="aside">Tap any card to read the file</span>
+      </header>
+      <div class="mosaic" id="mosaic"></div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience">
+      <header class="section-head reveal">
+        <h2>Ledger of Experience</h2>
+      </header>
+      <div class="ledger reveal" id="ledger"></div>
+    </section>
+
+    <!-- Toolkit -->
+    <section id="about">
+      <header class="section-head reveal">
+        <h2>Toolkit</h2>
+      </header>
+      <div class="toolkit reveal">
+        <ul id="tools"></ul>
+      </div>
+    </section>
+
+    <!-- Resume -->
+    <section id="resume">
+      <header class="section-head reveal">
+        <h2>Resume</h2>
+        <span class="aside">Embedded PDF</span>
+      </header>
+      <div class="resume-frame reveal">
+        <iframe
+          src="./assets/resume/lotsu_resume.pdf"
+          title="Eugene Lotsu resume"
+          loading="lazy">
+        </iframe>
+      </div>
+      <p class="resume-fallback reveal">
+        If the frame does not load,
+        <a href="./assets/resume/lotsu_resume.pdf" target="_blank" rel="noreferrer">open the PDF directly</a>.
+      </p>
+    </section>
+
+    <!-- Colophon -->
+    <footer class="colophon reveal" id="contact">
+      <div>
+        <p class="write" id="colophonWrite"></p>
+      </div>
+      <nav class="links" id="socials" aria-label="social"></nav>
+    </footer>
+  </main>
+
+  <!-- Modal -->
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+    <article class="sheet">
+      <header class="top">
+        <span class="kicker" id="modalKicker">Dossier</span>
+        <button class="close" id="closeModal" aria-label="Close">Close ×</button>
+      </header>
+      <h2 id="modalTitle"></h2>
+      <div class="gallery" id="modalGallery"></div>
+      <div class="body" id="modalBody"></div>
+      <dl class="specs" id="modalSpecs"></dl>
+      <div class="actions" id="modalActions"></div>
+    </article>
+  </div>
+
+  <script type="module" src="./assets/app.js?v=6"></script>
+</body>
+</html>
